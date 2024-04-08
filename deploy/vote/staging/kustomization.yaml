@@ -6,3 +6,19 @@ patchesStrategicMerge:
 - deployment.yaml
 - service.yaml
 
+replicas:
+  - name: vote
+    count: 7
+
+images:
+  - name: schoolofdevops/vote:v3
+    newTag: v4
+
+namespace: instavote
+
+commonLabels:
+  project: instavote
+  env: staging
+
+commonAnnotations:
+  supported-by: losdesoporte
