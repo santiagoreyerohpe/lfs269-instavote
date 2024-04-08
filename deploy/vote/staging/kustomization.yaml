@@ -22,3 +22,9 @@ commonLabels:
 
 commonAnnotations:
   supported-by: losdesoporte
+
+configMapGenerator:
+  - name: vote-options
+    env: options.env
+
+
